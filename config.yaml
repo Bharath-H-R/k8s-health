@@ -1,0 +1,13 @@
+smtp:
+  host: "smtp.godigit.com"
+  port: 25
+  from: "tech.infraengineers@godigit.com"
+  no_auth: true
+
+excluded_namespaces:
+  - kube-system
+  - dvantarace
+  - logging
+  - monitoring
+
+log_tail_lines: 50
