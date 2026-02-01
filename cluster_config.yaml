@@ -1,0 +1,57 @@
+# cluster_config.yaml
+clusters:
+  - name: "UAT-General"
+    context: "uat-general"
+    exclude_namespaces:
+      - "kube-system"
+      - "kube-public"
+      - "default"
+      - "ingress-nginx"
+  
+  - name: "UAT-BZ-General"
+    context: "uatbz-general"
+    exclude_namespaces:
+      - "kube-system"
+      - "kube-public"
+      - "default"
+  
+  - name: "UAT-BZ-AI"
+    context: "uatbz-ai"
+    exclude_namespaces:
+      - "kube-system"
+      - "kube-public"
+      - "default"
+  
+  - name: "UAT-BZ-Bot"
+    context: "uatbz-bot"
+    exclude_namespaces:
+      - "kube-system"
+      - "kube-public"
+      - "default"
+  
+  - name: "Preprod-General"
+    context: "preprod-general"
+    exclude_namespaces:
+      - "kube-system"
+      - "kube-public"
+      - "default"
+  
+  - name: "Preprod-AI"
+    context: "preprod-ai"
+    exclude_namespaces:
+      - "kube-system"
+      - "kube-public"
+      - "default"
+  
+  - name: "Preprod-Bot"
+    context: "preprod-bot"
+    exclude_namespaces:
+      - "kube-system"
+      - "kube-public"
+      - "default"
+
+settings:
+  check_interval: 300  # 5 minutes
+  timeout: 10
+  retry_count: 3
+  max_workers: 50
